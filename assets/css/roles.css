@@ -1,0 +1,139 @@
+.player-role {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 3px 13px 3px 9px;
+    color: #000;
+    margin-right: 8px;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: 14px;
+    background: #ebebeb;
+}
+
+.player-role:before {
+    content: "";
+    margin-right: 10px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #767676;
+}
+
+.sponsor-role {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 3px 13px 3px 9px;
+    color: #000;
+    margin-right: 8px;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: 14px;
+    background: #ebebeb;
+}
+
+.sponsor-role:before {
+    content: "";
+    margin-right: 10px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #007fc9;
+}
+
+.admin-role {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 3px 13px 3px 9px;
+    color: #000;
+    margin-right: 8px;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: 14px;
+    background: #ebebeb;
+}
+
+.admin-role:before {
+    content: "";
+    margin-right: 10px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #ff3939;
+}
+
+.glava-role {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 3px 13px 3px 9px;
+    color: #000;
+    margin-right: 8px;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: 14px;
+    background: #ebebeb;
+}
+
+.glava-role:before {
+    content: "";
+    margin-right: 10px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #d800ff;
+}
+
+.sovet-role {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 3px 13px 3px 9px;
+    color: #000;
+    margin-right: 8px;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: 14px;
+    background: #ebebeb;
+}
+
+.sovet-role:before {
+    content: "";
+    margin-right: 10px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #00b6b0;
+}
+
+.dark-mode .player-role {
+color:#fff;
+background:#2c2c2c;
+}
+
+.dark-mode .sponsor-role {
+  color:#fff;
+  background:#2c2c2c;
+}
+
+.dark-mode .admin-role {
+  color:#fff;
+  background:#2c2c2c;
+}
+
+.dark-mode .sovet-role {
+  color:#fff;
+  background:#2c2c2c;
+}
+
+.dark-mode .glava-role {
+  color:#fff;
+  background:#2c2c2c;
+}
