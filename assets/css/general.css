@@ -153,6 +153,7 @@ body {
     width: 50%;
     margin: 0% 0% 0% 25%;
     position: relative;
+    background: url(../assets/img/avatar.png);
 }
 .imnotgay{
     display: flex;
