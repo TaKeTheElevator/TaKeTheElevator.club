@@ -150,8 +150,9 @@ body {
 }
 
 #imgay {
-    width: 45%;
-    margin: 0% 0% 0% 30%;
+    width: 150%;
+    right: 20%;
+/*     margin: 0% 0% 0% 30%; */
     position: relative;
     background: url(../assets/img/avatar.png);
     border-radius: 25px;
@@ -166,7 +167,7 @@ body {
     }
 
 #back-1{
-background: url(../img/error.gif) center center / cover no-repeat #1a1d3f;
+background: #0a0b08;
     
 }
     
