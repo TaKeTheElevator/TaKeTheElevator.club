@@ -164,6 +164,11 @@ body {
         align-items: center;
     }
 
+#back-1{
+background: url(../img/error.gif) center center / cover no-repeat #1a1d3f;
+    
+}
+    
 
 #title {
     display: flex;
