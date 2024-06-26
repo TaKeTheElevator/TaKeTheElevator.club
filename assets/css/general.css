@@ -175,8 +175,8 @@ body {
     }
 
 #back-1{
-background: #0a0b08;
-    
+/*     background: #0a0b08; */
+    background: url(../img/bacc.gif) center center / cover no-repeat #0a0b08;
 }
     
 
