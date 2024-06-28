@@ -771,7 +771,8 @@ input[type="checkbox"]:checked+label::before {
     overflow: hidden;
     background: #000;
     margin: 20px 0;
-    z-index: -10;
+    z-index: -10
+    
 }
 .slideshow-item {
     width: 100%;
