@@ -1,0 +1,108 @@
+.steam-app {
+    position: relative;
+    width: 90%;
+    background-color: rgb(27 27 27 / 60%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 0px;
+    margin-top: 20px;
+    border: 3px solid #444;
+    gap: 13px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Pixel Georgia';
+    max-width: 360px;
+}
+
+.steam-app-image {
+    position: relative;
+    width: 100%;
+    height: 176px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.steam-app-infos {
+    position: relative;
+    padding: 15px;
+}
+
+.steam-app-title {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.steam-app-title-left {
+    display: inline-block;
+}
+
+.steam-app-title-left-name {
+    color: rgb(220, 220, 220);
+    font-size: 1.1em;
+    font-family: 'Pixel Georgia';
+}
+
+.steam-app-title-left-rating {
+    position: relative;
+    top: -8px;
+    font-size: 0.8em;
+}
+
+.steam-app-title-left-rating-star-grey {
+    color: transparent;
+    text-shadow: 0 0 0 rgb(200, 200, 200);
+}
+
+.steam-app-title-right {
+    position: relative;
+    display: inline-block;
+    top: 5px;
+    color: rgb(55, 230, 111);
+    font-size: 0.8em;
+    font-family: 'Pixel Georgia';
+    float: right;
+}
+
+.steam-app-description {
+    width: 100%;
+    color: rgb(150, 150, 150);
+    font-size: 0.8em;
+    font-family: 'Pixel Georgia';
+    margin-bottom: 20px;
+}
+
+.steam-app-footer {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.steam-app-footer-author {
+    display: inline-block;
+    color: rgb(200, 200, 200);
+    font-family: 'Pixel Georgia';
+    font-size: 0.8em;
+}
+
+.steam-app-footer-button {
+    display: inline-block;
+    float: right;
+}
+
+.steam-app-footer-button a {
+    color: rgb(164 167 170);
+    background: linear-gradient(rgb(32 32 32) 5%, rgb(23 23 23) 95%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0px 0px 0px 0px;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-family: 'Pixel Georgia';
+    border: 2px solid rgb(68, 68, 68);
+}
+
+.steam-app-footer-button a:hover {
+    color: rgb(250, 250, 250);
+    background: linear-gradient(rgb(45 45 45) 5%, rgb(40 40 40) 95%);
+    
+}
