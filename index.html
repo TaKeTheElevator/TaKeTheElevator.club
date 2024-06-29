@@ -10,7 +10,11 @@
   <script src="assets/js/demos.js"></script>
   <script src="assets/js/style.js"></script>
   <link href="assets/css/demos.css" rel="stylesheet" />
-
+  <link href="assets/steamwidgets/css/steam_user.css" rel="stylesheet" />
+  <link href="assets/steamwidgets/css/steam_server.css" rel="stylesheet" />
+  <link href="assets/steamwidgets/css/steam_group.css" rel="stylesheet" />
+  <link href="assets/steamwidgets/css/steam_app.css" rel="stylesheet" />
+  <link href="assets/steamwidgets/css/steam_workshop.css" rel="stylesheet" />
   <link rel="shortcut icon" href="assets/icon.ico" type="image/x-icon">
   <title>TaKeTheElevator</title>
 </head>
@@ -123,46 +127,26 @@
 
     </div>
     <row class="super-links">
-      <a target="_blank" href="https://steamcommunity.com/id/JuJooRaze/">
         <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faq" style="transition: all 1s ease 0s;">
-          <div class="accordion-body fs-sm pt-0">
-            <row class="in-super-links">
-
-              <span id="title-links">Стим профиль</span>
-
-
-
-            </row>
-          </div>
+          <steam-user steamid="76561198973182656"></steam-user>
         </div>
-      </a>
-      <a target="_blank" href="https://steamcommunity.com/groups/Valve-Company">
+    
+      
         <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faq" style="transition: all 1s ease 0s;">
-          <div class="accordion-body fs-sm pt-0">
-            <row class="in-super-links" style="    width: 100%;display: flex;flex-direction: column;">
-
-              <span id="title-links">Стим Группа</span>
-
-
-
-            </row>
-          </div>
+          <steam-user steamid="76561199240160375"></steam-user>
         </div>
-      </a>
-      <a target="_blank" href="https://steamcommunity.com/id/TaKeTheElevator">
+      
+    
+      
         <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faq" style="transition: all 1s ease 0s;">
-          <div class="accordion-body fs-sm pt-0">
-            <row class="in-super-links" style="    display: flex;flex-direction: row-reverse;text-align: right;">
+          <steam-user steamid="76561199202468037"></steam-user>
 
-              <span id="title-links">Стим №2</span>
-
-
-
-            </row>
-          </div>
         </div>
-      </a>
-
+     
+      <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faq" style="transition: all 1s ease 0s;">
+        <steam-user steamid="76561199387342651"></steam-user>
+      </div>
+     
     </row>
 
     <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faq" style="">
@@ -176,11 +160,15 @@
 </body>
 
 <!-- scripts -->
-<script src="assets/js/particles.js"></script>
-<script src="assets/js/app.js"></script>
 <script src="assets\js\bootstrap.bundle.min.js"></script>
 <script src="assets/js/style.js"></script>
 <script src="assets/js/jquery.min.js"></script>
+
+<script src="assets/steamwidgets/js/steam_app.js"></script>
+<script src="assets/steamwidgets/js/steam_group.js"></script>
+<script src="assets/steamwidgets/js/steam_server.js"></script>
+<script src="assets/steamwidgets/js/steam_user.js"></script>
+<script src="assets/steamwidgets/js/steam_workshop.js"></script>
 <script>
 
   $(function () {
@@ -192,25 +180,4 @@
       $('.preloader').addClass('kill-loader');
     }, 4000);
   });
-</script>
-<!-- stats.js -->
-<!-- <script src="js/lib/stats.js"></script> -->
-<script>
-  var count_particles, stats, update;
-  stats = new Stats;
-  stats.setMode(0);
-  stats.domElement.style.position = 'absolute';
-  stats.domElement.style.left = '0px';
-  stats.domElement.style.top = '0px';
-  document.body.appendChild(stats.domElement);
-  count_particles = document.querySelector('.js-count-particles');
-  update = function () {
-    stats.begin();
-    stats.end();
-    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-    }
-    requestAnimationFrame(update);
-  };
-  requestAnimationFrame(update);
 </script>
