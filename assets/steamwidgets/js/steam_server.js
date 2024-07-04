@@ -197,7 +197,7 @@
          req.open('GET', STEAMWIDGETS_SERVER_ENDPOINT + '/api/query/server?addr=' + addr, true);
          req.send();
      }
- 
+    
      updateWidget()
      {
          this.setupWidget(

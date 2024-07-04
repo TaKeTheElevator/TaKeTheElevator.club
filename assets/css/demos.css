@@ -1,61 +1,160 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,500);
 
 
+.header {
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    width: 97%;
+    height: 100%;
+    display: flex;
+    top: 0;
+    border-radius: 35px 35px 0 0;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, #0059e800 0%, #bebebe 12%, #595959 64%, #838383 96%);
+}
+
+.header-in{
+
+    border: 1px solid #252525;
+    background: linear-gradient(to bottom, #0059e8 4%, #3f97ff 14%, blue 64%, #0043cf 96%);
+    border-radius: 25px 25px 0px 0px;
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    height: 30px;
+    width: 100%;
+    top: 10px;
+    
+}
+.header-in-left{
+    position: relative;
+    margin-right: 5px;
+    height: 100%;
+    width: 10%;
+    float: left;
+    padding: 0px 0px 0px 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+}
+.header-in-left a{
+    cursor: pointer;
+    text-decoration: none;
+   
+}
+.header-in-left-text{
+    color: #adadad;
+    display: flex;
+    font-size: 25px;
+    align-items: center;
+    font-weight: 500;
+}
 
 
+.header-in-right{
+    position: relative;
+    margin-right: 5px;
+    height: 100%;
+    width: 10%;
+    float: right;
+    padding: 10px;
+    display: flex;
+    top: -10px;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 3px;
+}
 
-p{
-	line-height: 2em;
-	margin:0 0 20px;
+.header-button{
+   color: rgb(164 167 170);
+   border-radius: 5px;
+   padding: 5px 10px;
+   margin: 0px 0px 0px 0px;
+   text-decoration: none;
+   font-size: 0.9em;
+   font-family: 'Pixel Georgia';
+   width: 20px;
+   height: 10px;
+   display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.header-button img{
+    position: relative;
+    width: 30px;
+ }
+
+.slider_img_card {
+    border: 1px solid #252525;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 0 20px;
+    transition: transform .2s ease;
+    cursor: default;
+    height: 200px
+}
+.slider_img_card:hover {
+    transform: scale(1.03)
+}
+
+
+.slider_img {
+    position: absolute;
+    z-index: -1;
+    opacity: .3;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/assets/img/icons/icon.png) repeat-x;
+    background-size: contain;
+    background-position-x: 0;
+    gap: 25px;
+    animation: slider_img_anim 25s linear infinite;
+}
+
+.slider_img_card h1 {
+    font-size: 2.3em !important;
+    padding-bottom: 5px;
+	position: relative;
+	color: rgba(50, 115, 220, 0.904);
+  
+    text-shadow: 0px 0px 10px rgba(50, 115, 220, 0.829);
+    /* animation: slider_text_anim 15s linear infinite; */
+}
+.slider_text_card {
+	/* width: 100%; */
 	text-align: center;
-	font-family: Montserrat, "Roboto", sans-serif;
-
+    font-size: 1.7em !important;
+    padding-bottom: 5px;
+	position: absolute;
+   
 }
 
-hr{
-	border: 0;
-	border-bottom: #CCC 2px solid;
-	margin: 30px auto;
-	font-family: Montserrat, "Roboto", sans-serif;
-		font-size: large;
-	font-weight: bold;
-}
-
-.title{
-	font-size: 4em;
-	font-family: Montserrat, "Roboto", sans-serif;
-	font-size: large;
-	font-weight: bold;
-}
-
-.wrap{
-	max-width: 600px;
-	margin:1px auto;
-	font-family: Montserrat, "Roboto", sans-serif;
-	/* border-bottom: 5px solid #ee0e0e; */
+.slider_img_card span {
 	
-}
-.wrap::after{
-/* box-shadow:10px 10px 10px 10px #0056ff ; */
-}
-
-.type-wrap{
-	margin:0px auto;
-	padding:10px;
-	border-radius:1px;
-	font-family: 'Pixel Georgia';
-	font-size: 23px;
-	font-weight: bold;
-/* 	color: #0056ff; */
-	text-shadow:0px 0px  60px;
+    color: rgba(50, 115, 220, 0.712);
+    font-size: 1.9em !important;
+    text-shadow: 0px 0px 10px rgba(50, 115, 220, 0.829);
 }
 
-.typed-text{
-	/* height: 3px; */
-    /* background: #0056ff; */
-    /* box-shadow: 0px 0px 10px 2px; */
-    /* margin: 22px 0px 0px 0px; */
-	/* box-shadow: 0px 0px 40px 10px; */
-    margin: -12px 0px 0px 8px;
 
+
+@keyframes slider_img_anim {
+    0% {
+        background-position-x: -100%
+    }
+
+    to {
+        background-position-x: 100%
+    }
 }

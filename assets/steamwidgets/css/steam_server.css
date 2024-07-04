@@ -1,6 +1,8 @@
 .steam-server {
     position: relative;
-    width: 90%;
+    width: 415px;
+    max-width: 415px;
+    /* height: 192px; */
     background-color: rgb(27 27 27 / 60%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 0px;
@@ -67,6 +69,7 @@
     display: inline-block;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 15px;
 }
 
 .steam-server-gameinfo-item {
