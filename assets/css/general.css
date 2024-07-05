@@ -70,7 +70,7 @@ a {
 body {
     margin: 0;
     height: 100vh;
-    background: url(/assets/img/gmod.png) center center / cover no-repeat #000;
+    background: url(../img/gmod.png) center center / cover no-repeat #000;
     color: white;
     font-family: 'Ubuntu', sans-serif;
     display: flex;
