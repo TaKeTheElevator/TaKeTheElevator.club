@@ -143,23 +143,23 @@
     </div>
     <row class="super-links">
         <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faq" style="transition: all 1s ease 0s;">
-          <steam-user header="assets/img/steam1.png" steamid="76561198973182656"></steam-user>
+          <steam-user data-modal-target="modal76561198973182656" header="assets/img/steam1.png" steamid="76561198973182656"></steam-user>
         </div>
     
       
         <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faq" style="transition: all 1s ease 0s;">
-          <steam-user header="assets/img/steam2.png" steamid="76561199240160375"></steam-user>
+          <steam-user data-modal-target="modal76561199240160375" header="assets/img/steam2.png" steamid="76561199240160375"></steam-user>
         </div>
       
     
       
         <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faq" style="transition: all 1s ease 0s;">
-          <steam-user header="assets/img/steam3.png" steamid="76561198137276888"></steam-user>
+          <steam-user data-modal-target="modal76561198137276888" header="assets/img/steam3.png" steamid="76561198137276888"></steam-user>
 
         </div>
      
       <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faq" style="transition: all 1s ease 0s;">
-        <steam-user header="assets/img/steam4.png" steamid="76561199387342651"></steam-user>
+        <steam-user data-modal-target="modal76561199387342651" header="assets/img/steam4.png" steamid="76561199387342651"></steam-user>
       </div>
      
     </row>
@@ -188,3 +188,83 @@
 <script src="assets/steamwidgets/js/steam_user.js"></script>
 <script src="assets/steamwidgets/js/steam_workshop.js"></script>
 <script src="assets/js/style.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const target = document.querySelector('steam-user');
+  
+    // Функция для показа модального окна
+    const showModal = () => {
+      const modal = document.getElementById('modal');
+      if (modal) {
+        modal.style.display = 'block';
+      }
+    };
+  
+    // Функция для скрытия модального окна
+    const hideModal = () => {
+      const modal = document.getElementById('modal');
+      if (modal) {
+        modal.style.display = 'none';
+      }
+    };
+  
+    // Навешиваем обработчики на события наведения мыши
+    target.addEventListener('mouseover', showModal);
+    target.addEventListener('mouseout', hideModal);
+  
+    // Используем MutationObserver для отслеживания появления модального окна в DOM
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.addedNodes.length) {
+          mutation.addedNodes.forEach((node) => {
+            if (node.id === 'modal') {
+              // Модальное окно добавлено, можно применять стили или логику
+            }
+          });
+        }
+      });
+    });
+  
+    // Начинаем наблюдение за изменениями в документе
+    observer.observe(document.body, { childList: true, subtree: true });
+  });
+
+
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const users = document.querySelectorAll('steam-user');
+
+  users.forEach(user => {
+    user.addEventListener('mouseover', function() {
+      const modalId = user.getAttribute('data-modal-target');
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.style.display = 'block';
+      }
+    });
+
+    user.addEventListener('mouseout', function() {
+      const modalId = user.getAttribute('data-modal-target');
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.style.display = 'none';
+      }
+    });
+  });
+});
+</script>

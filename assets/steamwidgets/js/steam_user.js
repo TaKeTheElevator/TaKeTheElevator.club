@@ -1,4 +1,6 @@
-/**
+
+
+  /**
  * SteamWidgets - Steam Widgets for your website
  * 
  * Module: Steam User Widget
@@ -14,6 +16,10 @@
   * 
   * Handle custom HTML element to render Steam user widgets
   */
+
+
+
+
  class SteamUserElem extends HTMLElement
  {
      storedData = {};
@@ -141,6 +147,8 @@
                  member_since = member_since.replace(':day', regdate.getDate());
                  
                  let html = `
+                 <div class="modal" id="modal` + steamid + `" style=""><iframe src="https://gamer2810.github.io/steam-miniprofile/?accountId=` + steamid + `" style="border:0px #ffffff none;    width: 326px;
+    height: 225px;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px" allowfullscreen=""></iframe></div>
                      <div class="steam-user" ` + ((widgetStyle.length > 0) ? widgetStyle: '') + `>
                     
                          <div class="steam-user-image" style="` + bgimage + ` ` + ((header == '') ? 'display: none;' : '') + ` ` + ((height !== null) ? 'height: ' + height + 'px;' : '') + ((widgetImageStyle.length > 0) ? widgetImageStyle : '') + `"></div>
@@ -148,7 +156,10 @@
                          <div class="steam-user-infos">
                             <div class="steam-user-infos-left">
                             <a target="_blank" href="` + json.data.profileurl + `">
-                                <div class="steam-user-infos-left-avatar"><img src="` + json.data.avatarfull + `" alt="Avatar"/></div>
+                                <div class="steam-user-infos-left-avatar">
+                                <img src="` + json.data.avatarfull + `" alt="Avatar"/>
+                                
+                                </div>
                                 </a>
                                 <div class="steam-user-infos-left-text">
                                     <div class="steam-user-infos-left-text-name" ` + ((styleColorTextBright !== null) ? 'style="color: ' + styleColorTextBright + ';"' : '') + `>` + json.data.personaname + `</div>
@@ -363,4 +374,6 @@
          this.elem.remove();
      }
  }
+
+
  

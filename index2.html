@@ -15,6 +15,17 @@
   <link href="assets/steamwidgets/css/steam_workshop.css" rel="stylesheet" />
   <link rel="shortcut icon" href="assets/icon.ico" type="image/x-icon">
   <title>TaKeTheElevator</title>
+
+
+
+  <style>
+    #server-info {
+        width: 300px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px;
+    }
+</style>
 </head>
 
 
@@ -28,8 +39,7 @@
 <body style="background: #ffffff;">
   
 
-
-
+  
 
   <div class="preloader2">
     
@@ -39,8 +49,23 @@
      <h1>Powered by <a target="_blank" href="https://steamcommunity.com/id/JuJooRaze/"><span>TaKeTheElevator</span></a></h1>
      
     </div>
+    
+
+
+   
   </div>
+   <div style="position: absolute; bottom: 5%; z-index: 9999;">
+ <steam-user data-modal-target="modal76561198973182656" header="assets/img/steam1.png" steamid="76561198973182656">
   
+ </steam-user>
+ <steam-user data-modal-target="modal76561198973182657" header="assets/img/steam1.png" steamid="76561198973182657">
+  
+ </steam-user>
+ 
+ 
+ </div>
+
+
 </body>
 
 <!-- scripts -->
@@ -54,3 +79,176 @@
 <script src="assets/steamwidgets/js/steam_user.js"></script>
 <script src="assets/steamwidgets/js/steam_workshop.js"></script>
 <!-- <script src="assets/js/style.js"></script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const target = document.querySelector('steam-user');
+  
+    // Функция для показа модального окна
+    const showModal = () => {
+      const modal = document.getElementById('modal');
+      if (modal) {
+        modal.style.display = 'block';
+      }
+    };
+  
+    // Функция для скрытия модального окна
+    const hideModal = () => {
+      const modal = document.getElementById('modal');
+      if (modal) {
+        modal.style.display = 'none';
+      }
+    };
+  
+    // Навешиваем обработчики на события наведения мыши
+    target.addEventListener('mouseover', showModal);
+    target.addEventListener('mouseout', hideModal);
+  
+    // Используем MutationObserver для отслеживания появления модального окна в DOM
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.addedNodes.length) {
+          mutation.addedNodes.forEach((node) => {
+            if (node.id === 'modal') {
+              // Модальное окно добавлено, можно применять стили или логику
+            }
+          });
+        }
+      });
+    });
+  
+    // Начинаем наблюдение за изменениями в документе
+    observer.observe(document.body, { childList: true, subtree: true });
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+  const users = document.querySelectorAll('steam-user');
+
+  users.forEach(user => {
+    user.addEventListener('mouseover', function() {
+      const modalId = user.getAttribute('data-modal-target');
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.style.display = 'block';
+      }
+    });
+
+    user.addEventListener('mouseout', function() {
+      const modalId = user.getAttribute('data-modal-target');
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
