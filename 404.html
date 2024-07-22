@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="TaKeTheElevator site ;)">
-  <link rel="stylesheet" href="assets\css\general.css">
+  <link rel="stylesheet" href="assets/css/general.css">
   <script src="assets/js/typed.js" type="text/javascript"></script>
   <script src="assets/js/style.js"></script>
-  <link rel="stylesheet" href="assets\css\demos.css">
+  <link rel="stylesheet" href="assets/css/demos.css">
   <link href="assets/steamwidgets/css/steam_user.css" rel="stylesheet" />
   <link href="assets/steamwidgets/css/steam_server.css" rel="stylesheet" />
   <link href="assets/steamwidgets/css/steam_group.css" rel="stylesheet" />
@@ -16,77 +16,66 @@
   <link href="assets/steamwidgets/css/steam_workshop.css" rel="stylesheet" />
   <link rel="shortcut icon" href="assets/icon.ico" type="image/x-icon">
   <title>TaKeTheElevator</title>
+  <style>
+    .overlay {
+      background: rgb(7 8 5 / 0%);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .slider_img_card {
+      max-width: 200px;
+      min-width: 250px;
+      width: 35%;
+      height: 50px;
+      cursor: pointer;
+      position: absolute;
+      background: rgb(0 0 0 / 70%);
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+    }
+    
+    .slider_img_card h2 {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  </style>
 </head>
-
-
-
-<!-- particles.js container -->
-
-
-
-
-
+<!-- 
+╭━━━━╮╱╭╮╭━╮╱╭━━━━┳╮╱╱╱╱╭━━━┳╮╱╱╱╱╱╱╱╱╱╭╮
+┃╭╮╭╮┃╱┃┃┃╭╯╱┃╭╮╭╮┃┃╱╱╱╱┃╭━━┫┃╱╱╱╱╱╱╱╱╭╯╰╮
+╰╯┃┃┣┻━┫╰╯╯╭━┻┫┃┃╰┫╰━┳━━┫╰━━┫┃╭━━┳╮╭┳━┻╮╭╋━━┳━╮
+╱╱┃┃┃╭╮┃╭╮┃┃┃━┫┃┃╱┃╭╮┃┃━┫╭━━┫┃┃┃━┫╰╯┃╭╮┃┃┃╭╮┃╭╯
+╱╱┃┃┃╭╮┃┃┃╰┫┃━┫┃┃╱┃┃┃┃┃━┫╰━━┫╰┫┃━╋╮╭┫╭╮┃╰┫╰╯┃┃
+╱╱╰╯╰╯╰┻╯╰━┻━━╯╰╯╱╰╯╰┻━━┻━━━┻━┻━━╯╰╯╰╯╰┻━┻━━┻╯
+-->
 <body>
   <div class="preloader">
     <img src="assets/img/icon/logo.png">
-    
     <div class="loader"></div>
     <div class="loader-nick">
-
-     <h1>Powered by <a target="_blank" href="https://steamcommunity.com/id/JuJooRaze/"><span>TaKeTheElevator</span></a></h1>
+      <h1>Powered by <a target="_blank" href="https://steamcommunity.com/id/JuJooRaze/"><span>TaKeTheElevator</span></a></h1>
     </div>
   </div>
-   <!-- <audio id="music" src="assets/music/methamphetamine.solutions.mp3" autoplay="" loop="" onplaying="" preload="auto"
-    style="display:none"></audio> -->
   <div class="overlay"></div>
-  <!--  
-    <svg id="wave" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 24 150 28" preserveaspectratio="none" shape-rendering="auto">
-        <defs>
-            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
-            </defs>
-            <g class="parallax">
-            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.3"></use>
-            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.2)"></use>
-            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.1)"></use>
-            <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(255,255,255,0.1)"></use>
-            </g>
-    </svg>
--->
-  <!-- <div id="particles-js" style='width: 100%;height: 100%;' style="background: url(../img/overlay.png);"> -->
-
-
-
-  <div class="info" >
-    <!--  
-      <input type="checkbox" class="stop btn" id="avatar" style="cursor: pointer;"
-       onclick="if (!music.paused) {music.pause()} else {music.play()}">
-       <img id="avatar" src="assets\img\avatar.png"></input>-->
-
-    <!-- <img id="avatar" src="assets\img\avatar.png" id="checkbox_1" > -->
-    <!-- <label class="checkbox__label" for="checkbox_1"id="avatar "onclick="if (!music.paused) {music.pause()} else {music.play()}"></label> -->
-
-   
-
-    <!-- <button  class="stop" style="cursor: pointer;" onclick="if (!music.paused) {music.pause()} else {music.play()}"><img id="avatar" src="assets\img\avatar.png"></button> -->
-
-
-    
-    <span id="title">Ошибка❗
-      
-    </span>
-    <!-- <span style="text-shadow:0px 0px 12px rgb(255,0,0);">💥</span> -->
-
+  <div class="info">
+    <span id="title">Ошибка❗</span>
     <div class="wrap">
       <div class="type-wrap" style="font-size: larger; font-weight: 500;">
-
         <span id="typed2" style="white-space:pre;"></span>
         <div class="typed-text"></div>
       </div>
     </div>
-    <script> var typed2 = new Typed('#typed2', {
+    <script>
+      var typed2 = new Typed('#typed2', {
         strings: ['<span>😢</span>Данной страницы не существет<span>😢</span>',
-          '<span>🔎</span>Проверь правильность ссылки<span>🔎</span> ',
-          '<span>🖥️</span>Или перейди на главную<span>🖥️</span> '],
+          '<span>🔎</span>Проверь правильность ссылки<span>🔎</span>',
+          '<span>🖥️</span>Или перейди на главную<span>🖥️</span>'],
         typeSpeed: 50,
         backSpeed: 50,
         fadeOut: false,
@@ -94,50 +83,29 @@
       });
     </script>
 
-    <div class="links" style="width: 50%;
-    max-width: 752px; padding: 0;">
 
 
-      <div class="links" style="    padding-top: 40px;">
-        
-
-    
-        <a href="index.html">
-          
-          <div class="slider_img_card" style="max-width: 200px;
-          min-width: 250px;
-          width: 35%;
-          height: 50px;
-          cursor: pointer;
-          position: absolute;">
-            <div class="slider_img" style="background-image: url(assets/icon.ico);"></div>
-             <h2>🖥️На главную🖥️</h2>
-          </div>
-  
-        </a>
-  
-
-
-      </div>
-
-
+<div class="links" style="padding-top: 40px;">
+  <a href="index.html">
+    <div class="slider_img_card">
+      <div class="slider_img" style="background-image: url(assets/icon.ico);"></div>
+      <h2>🖥️На главную🖥️</h2>
     </div>
-   
+  </a>
+</div>
+</div>
+</div>
 
 
-  </div>  
-
-
+  </div>
+  <!-- scripts -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/steamwidgets/js/steam_app.js"></script>
+  <script src="assets/steamwidgets/js/steam_group.js"></script>
+  <script src="assets/steamwidgets/js/steam_server.js"></script>
+  <script src="assets/steamwidgets/js/steam_user.js"></script>
+  <script src="assets/steamwidgets/js/steam_workshop.js"></script>
+  <script src="assets/js/style.js"></script>
 </body>
-
-<!-- scripts -->
-<script src="assets\js\bootstrap.bundle.min.js"></script>
-
-<script src="assets/js/jquery.min.js"></script>
-
-<script src="assets/steamwidgets/js/steam_app.js"></script>
-<script src="assets/steamwidgets/js/steam_group.js"></script>
-<script src="assets/steamwidgets/js/steam_server.js"></script>
-<script src="assets/steamwidgets/js/steam_user.js"></script>
-<script src="assets/steamwidgets/js/steam_workshop.js"></script>
-<script src="assets/js/style.js"></script>
+</html>
