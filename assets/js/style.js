@@ -7,3 +7,52 @@ $(function () {
       $('.preloader').addClass('kill-loader');
     }, 2000);
   });
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const target = document.querySelector('steam-user');
+    const showModal = () => {
+      const modal = document.getElementById('modal');
+      if (modal) {
+        modal.style.display = 'block';
+      }
+    };
+    const hideModal = () => {
+      const modal = document.getElementById('modal');
+      if (modal) {
+        modal.style.display = 'none';
+      }
+    };
+    target.addEventListener('mouseover', showModal);
+    target.addEventListener('mouseout', hideModal);
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.addedNodes.length) {
+          mutation.addedNodes.forEach((node) => {
+            if (node.id === 'modal') {
+            }
+          });
+        }
+      });
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    const users = document.querySelectorAll('steam-user');
+    users.forEach(user => {
+      user.addEventListener('mouseover', function() {
+        const modalId = user.getAttribute('data-modal-target');
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          modal.style.display = 'block';
+        }
+      });
+      user.addEventListener('mouseout', function() {
+        const modalId = user.getAttribute('data-modal-target');
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          modal.style.display = 'none';
+        }
+      });
+    });
+  });

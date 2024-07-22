@@ -1,6 +1,18 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,500);
 
-
+.steam-window{
+  transition: all 1s ease 0s;
+    position: sticky;
+}
+.gpt-window{
+width: 55%;
+height: 600px;
+position: static;
+transition: all 1s ease;
+}
+.wrap{
+  height: 30px;
+}
 .header {
     position: absolute;
     overflow: hidden;
@@ -120,6 +132,7 @@
 .slider_img_card:hover {
     transform: scale(1.03)
 }
+
 
 
 .slider_img {
@@ -302,7 +315,27 @@
                    border-radius: 0%;
     }
   }
-
+  @keyframes gpt-anime {
+    0% {
+      width: 20%;
+      height: 20%;
+      
+                    border-radius: 3%;
+    }
+    50% {
+      width: 55%;
+      height: 20%;
+      
+                    border-radius: 3%;
+    }
+    
+    100% {
+      width: 55%;
+      height: 600px;
+     
+                   border-radius: 0%;
+    }
+  }
     @keyframes box-anim {
         0% {
           width: 20%;
@@ -369,10 +402,13 @@
         position: absolute;
       }
       
-      .modal {
-        display: none;
-        position: absolute;
-        top: 15%;
-        z-index: 1000;
-      }
+.modal {
+    display: none;
+    position: absolute;
+    top: -75%;
+    right: 11%;
+    z-index: 1000;
+}
+
+
       

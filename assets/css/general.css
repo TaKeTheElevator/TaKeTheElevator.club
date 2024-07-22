@@ -50,8 +50,7 @@ a {
     align-items: center;
     justify-content: center;
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    background-size: cover;
 }
 
 .loader {
@@ -93,14 +92,16 @@ a {
 body {
     margin: 0;
     height: 100vh;
-    background: url(../img/gmod.png) center center / cover no-repeat #000;
+    background: url(../img/gmod.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
     color: white;
     font-family: 'Ubuntu', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
  .video--media {
         top: 0;
@@ -146,7 +147,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 3px;
+    width: 0px;
 }
 
 #wave {
@@ -552,7 +553,8 @@ button {
     border: 2px solid rgba(54, 54, 54, .6);
     border-radius: 20px;
     padding: 10px;
-    width: 150px;
+    height: 100%;
+    width: -webkit-fill-available;
     /* background: url(assets/img/back/header.jpg) center center / cover no-repeat; */
 }
 
