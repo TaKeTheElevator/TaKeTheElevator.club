@@ -56,3 +56,22 @@ $(function () {
       });
     });
   });
+
+
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var musicButton = document.getElementById('musicButton');
+    var musicPlayer = document.getElementById('musicPlayer');
+    
+    musicButton.addEventListener('click', function() {
+      // Проверяем, воспроизводится ли музыка
+      if (musicPlayer.paused) {
+        musicPlayer.play(); // Воспроизводим музыку
+        musicButton.classList.remove('playing'); // Добавляем класс при воспроизведении
+      } else {
+        musicPlayer.pause(); // Приостановим музыку, если она уже играет
+        musicButton.classList.add('playing'); // Удаляем класс при паузе
+      }
+    });
+  });

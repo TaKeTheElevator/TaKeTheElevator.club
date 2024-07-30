@@ -4,12 +4,6 @@
   transition: all 1s ease 0s;
     position: sticky;
 }
-.gpt-window{
-width: 55%;
-height: 600px;
-position: static;
-transition: all 1s ease;
-}
 .wrap{
   height: 30px;
 }
@@ -315,27 +309,7 @@ transition: all 1s ease;
                    border-radius: 0%;
     }
   }
-  @keyframes gpt-anime {
-    0% {
-      width: 20%;
-      height: 20%;
-      
-                    border-radius: 3%;
-    }
-    50% {
-      width: 55%;
-      height: 20%;
-      
-                    border-radius: 3%;
-    }
-    
-    100% {
-      width: 55%;
-      height: 600px;
-     
-                   border-radius: 0%;
-    }
-  }
+
     @keyframes box-anim {
         0% {
           width: 20%;
@@ -411,4 +385,35 @@ transition: all 1s ease;
 }
 
 
-      
+.music-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  width: 150px;
+  height: 150px;
+  margin:20px ;
+  /* box-shadow: 0px 0px 20px 8px rgb(85 110 139 / 60%); */
+  border-radius: 100%;
+}
+
+.music-button img {
+  width: 150px;/* Размер кнопки, можно изменить по своему усмотрению */
+  height: 150px;/* Размер кнопки, можно изменить по своему усмотрению */
+  border-radius: 50%; /* Закругление изображения */
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0px 0px 20px 8px rgb(85 110 139 / 20%);
+}
+
+.music-button:hover img {
+  transform: scale(0.9); /* Уменьшение при наведении */
+  box-shadow: 0px 0px 20px 8px rgb(85 110 139 / 60%);
+}
+
+/* .music-button:active img, */
+.playing img {
+  box-shadow: 0px 0px 20px 8px rgb(85 110 139 / 100%); /* Подсветка при воспроизведении */
+}
+.playing img:hover {
+  box-shadow: 0px 0px 20px 8px rgb(85 110 139 / 100%); /* Подсветка при воспроизведении */
+}
