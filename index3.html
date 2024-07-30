@@ -5,20 +5,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="TaKeTheElevator site ;)">
+  
+  <!-- Стили -->
   <link rel="stylesheet" href="assets/css/general.css">
   <link rel="stylesheet" href="assets/css/demos.css">
-  <link href="assets/steamwidgets/css/steam_user.css" rel="stylesheet" />
-  <link href="assets/steamwidgets/css/steam_server.css" rel="stylesheet" />
-  <link href="assets/steamwidgets/css/steam_group.css" rel="stylesheet" />
-  <link href="assets/steamwidgets/css/steam_app.css" rel="stylesheet" />
-  <link href="assets/steamwidgets/css/steam_workshop.css" rel="stylesheet" />
+  <link href="assets/steamwidgets/css/steam_user.css" rel="stylesheet">
+  <link href="assets/steamwidgets/css/steam_server.css" rel="stylesheet">
+  <link href="assets/steamwidgets/css/steam_group.css" rel="stylesheet">
+  <link href="assets/steamwidgets/css/steam_app.css" rel="stylesheet">
+  <link href="assets/steamwidgets/css/steam_workshop.css" rel="stylesheet">
   <link rel="shortcut icon" href="assets/icon.ico" type="image/x-icon">
+  
+  <!-- Скрипты -->
   <script src="assets/js/typed.js" type="text/javascript"></script>
   <script src="assets/js/style.js"></script>
+  
   <title>TaKeTheElevator</title>
 </head>
-<body>
-    <!-- 
+  <!-- 
 ╭━━━━╮╱╭╮╭━╮╱╭━━━━┳╮╱╱╱╱╭━━━┳╮╱╱╱╱╱╱╱╱╱╭╮
 ┃╭╮╭╮┃╱┃┃┃╭╯╱┃╭╮╭╮┃┃╱╱╱╱┃╭━━┫┃╱╱╱╱╱╱╱╱╭╯╰╮
 ╰╯┃┃┣┻━┫╰╯╯╭━┻┫┃┃╰┫╰━┳━━┫╰━━┫┃╭━━┳╮╭┳━┻╮╭╋━━┳━╮
@@ -26,72 +30,113 @@
 ╱╱┃┃┃╭╮┃┃┃╰┫┃━┫┃┃╱┃┃┃┃┃━┫╰━━┫╰┫┃━╋╮╭┫╭╮┃╰┫╰╯┃┃
 ╱╱╰╯╰╯╰┻╯╰━┻━━╯╰╯╱╰╯╰┻━━┻━━━┻━┻━━╯╰╯╰╯╰┻━┻━━┻╯
 -->
+<body>
+     <!-- Вспомогательный элемент для музыки -->
+  <audio id="musicPlayer" src="assets/music/methamphetamine.solutions.mp3" autoplay loop preload="auto" style="display:none"></audio>
+
+  <!-- Прелоадер -->
   <div class="preloader">
     <img src="assets/img/icon/logo.png">
     <div class="loader"></div>
     <div class="loader-nick">
-      <h1>Powered by <a target="_blank" href="https://steamcommunity.com/id/JuJooRaze/"><span>TaKeTheElevator</span></a></h1>
+      <h1>Powered by 
+        <a target="_blank" href="https://steamcommunity.com/id/JuJooRaze/">
+          <span>TaKeTheElevator</span>
+        </a>
+      </h1>
     </div>
   </div>
-  <!-- <audio id="music" src="assets/music/methamphetamine.solutions.mp3" autoplay="" loop="" onplaying="" preload="auto" style="display:none"></audio> -->
-  <div class="overlay"></div>
+  
+ <!-- Овеплей -->
+ <div class="overlay"></div>
+
+  <!-- Слайдер с кнопками -->
   <div class="slider_img_card2" style="max-width: 300px; min-width: 250px; width: 35%; height: 70px; margin-top: 10px; top: 0%; position: absolute; background: rgb(0 0 0 / 70%);">
     <div class="slider_img" style="background-image: url(assets/icon.ico);"></div>
     <div class="links" style="width: 100%; padding: 0px;">
       <a href="servers.html">
-        <div class="button2" id="but"><img src="assets/img/icon/server.png" class="icon2"></div>
+        <div class="button2" id="but">
+          <img src="assets/img/icon/server.png" class="icon2">
+        </div>
       </a>
       <a href="#">
-        <div class="button2" id="but"><img src="assets/img/icon/logo.png" class="icon2"></div>
+        <div class="button2" id="but">
+          <img src="assets/img/icon/logo.png" class="icon2">
+        </div>
       </a>
       <a target="_blank" href="loader.html">
-        <div class="button2" id="but"><img src="assets/img/icon/main.png" class="icon2"></div>
+        <div class="button2" id="but">
+          <img src="assets/img/icon/main.png" class="icon2">
+        </div>
       </a>
     </div>
   </div>
+
+  <!-- Основная информация -->
   <div class="info">
-    <div class="checkbox" style="position: relative; display: flex; flex-direction: column; flex-wrap: nowrap; align-content: center; justify-content: space-evenly; align-items: center; margin: 0px 0px 10px 0px;">
-      <input class="checkbox__input" type="checkbox" id="checkbox_1" id="avatar" style="background-image: url(assets\img\steam-red.gif);">
-      <label class="checkbox__label" for="checkbox_1" id="avatar " onclick="if (!music.paused) {music.pause()} else {music.play()}"><img id="avatar" src="assets\img\avatar.png"></label>
-    </div>
-    <span id="title">TaKeTheElevator <img id="flag" src="assets\img\russia.png"></span>
+    <button id="musicButton" class="music-button">
+        <img src="assets/img/avatar.png" alt="Play Music">
+      </button>
+
+    <span id="title">TaKeTheElevator
+      <!-- <img id="flag" src="assets/img/russia.png"> -->
+    </span>
+
     <div class="wrap">
       <div class="type-wrap" style="font-size: larger; font-weight: 500;">
         <span id="typed2" style="white-space:pre;"></span>
         <div class="typed-text"></div>
       </div>
     </div>
+
+    <!-- Скрипт для Typed.js -->
     <script>
       var typed2 = new Typed('#typed2', {
-        strings: ['<a style="" href="https://steamcommunity.com/id/JuJooRaze/"><span style="text-shadow:0px 0px 17px rgb(255,0,0);">🔥</span>Играю в <strong>Garry,s Mod </strong><span style="text-shadow:0px 0px 17px rgb(255,0,0);">🔥</span></a>',
+        strings: [
+          '<a href="https://steamcommunity.com/id/JuJooRaze/"><span style="text-shadow:0px 0px 17px rgb(255,0,0);">🔥</span>Играю в <strong>Garry,s Mod </strong><span style="text-shadow:0px 0px 17px rgb(255,0,0);">🔥</span></a>',
           '<a href="https://discord.gg/YZDKSrAbPu"><span style="text-shadow:0px 0px 17px rgb(255,0,0);">💥</span>Присоединяйся к моему дискорду!<span style="text-shadow:0px 0px 17px rgb(255,0,0);">💥</span></a>',
-          '<a href="https://steamcommunity.com/groups/Valve-Company"><span style="text-shadow:0px 0px 17px rgb(255,0,0);"></span>Еще у меня есть стим группа!<span style="text-shadow:0px 0px 17px rgb(255,0,0);">❤️</span></a>'],
+          '<a href="https://steamcommunity.com/groups/Valve-Company"><span style="text-shadow:0px 0px 17px rgb(255,0,0);"></span>Еще у меня есть стим группа!<span style="text-shadow:0px 0px 17px rgb(255,0,0);">❤️</span></a>'
+        ],
         typeSpeed: 50,
         backSpeed: 50,
         fadeOut: false,
         loop: true
       });
     </script>
+
+    <!-- Ссылки на социальные сети -->
     <div class="links" style="width: 100%; max-width: 752px; padding: 0;">
       <div class="links" style="padding-top: 40px;">
         <a target="_blank" href="https://www.twitch.tv/jujooraze">
-          <div class="button" id="but"><img src="assets/img/icon/twitch1.png" class="icon"></div>
+          <div class="button" id="but">
+            <img src="assets/img/icon/twitch1.png" class="icon">
+          </div>
         </a>
         <a target="_blank" href="https://discord.gg/YZDKSrAbPu">
-          <div class="button" id="but"><img src="assets/img/icon/discord.png" class="icon"></div>
+          <div class="button" id="but">
+            <img src="assets/img/icon/discord.png" class="icon">
+          </div>
         </a>
         <button class="rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
-          <div class="button" id="but"><img src="assets/img/icon/steam.png" class="icon"></div>
+          <div class="button" id="but">
+            <img src="assets/img/icon/steam.png" class="icon">
+          </div>
         </button>
         <a target="_blank" href="https://t.me/T_a_K_e_T_h_e_E_l_e_v_a_t_o_r">
-          <div class="button" id="but"><img src="assets/img/icon/telegram.png" class="icon"></div>
+          <div class="button" id="but">
+            <img src="assets/img/icon/telegram.png" class="icon">
+          </div>
         </a>
         <a target="_blank" href="https://www.youtube.com/channel/UCY_xoKP3mWT5HuVV63LoGOw">
-          <div class="button" id="but"><img src="assets/img/icon/youtube.png" class="icon"></div>
+          <div class="button" id="but">
+            <img src="assets/img/icon/youtube.png" class="icon">
+          </div>
         </a>
       </div>
     </div>
-    <row class="super-links">
+
+    <!-- Steam Widgets -->
+    <div class="super-links">
       <div id="q1" class="accordion-collapse collapse steam-window" data-bs-parent="#faq">
         <steam-user data-modal-target="modal76561198973182656" header="assets/img/steam1.png" steamid="76561198973182656"></steam-user>
       </div>
@@ -104,14 +149,11 @@
       <div id="q1" class="accordion-collapse collapse steam-window" data-bs-parent="#faq">
         <steam-user data-modal-target="modal76561199387342651" header="assets/img/steam4.png" steamid="76561199387342651"></steam-user>
       </div>
-    </row>
-    <div id="q2" class="accordion-collapse collapse steam-window" data-bs-parent="#faq" style="">
-      <div class="accordion-body fs-sm pt-0">
-        <p>tttttt.</p>
-      </div>
     </div>
   </div>
-  <script src="assets\js\bootstrap.bundle.min.js"></script>
+
+  <!-- Скрипты -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/steamwidgets/js/steam_app.js"></script>
   <script src="assets/steamwidgets/js/steam_group.js"></script>
@@ -119,56 +161,17 @@
   <script src="assets/steamwidgets/js/steam_user.js"></script>
   <script src="assets/steamwidgets/js/steam_workshop.js"></script>
   <script src="assets/js/style.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const target = document.querySelector('steam-user');
-      const showModal = () => {
-        const modal = document.getElementById('modal');
-        if (modal) {
-          modal.style.display = 'block';
-        }
-      };
-      const hideModal = () => {
-        const modal = document.getElementById('modal');
-        if (modal) {
-          modal.style.display = 'none';
-        }
-      };
-      target.addEventListener('mouseover', showModal);
-      target.addEventListener('mouseout', hideModal);
-      const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-          if (mutation.addedNodes.length) {
-            mutation.addedNodes.forEach((node) => {
-              if (node.id === 'modal') {
-              }
-            });
-          }
-        });
-      });
-      observer.observe(document.body, { childList: true, subtree: true });
-    });
-  </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const users = document.querySelectorAll('steam-user');
-      users.forEach(user => {
-        user.addEventListener('mouseover', function() {
-          const modalId = user.getAttribute('data-modal-target');
-          const modal = document.getElementById(modalId);
-          if (modal) {
-            modal.style.display = 'block';
-          }
-        });
-        user.addEventListener('mouseout', function() {
-          const modalId = user.getAttribute('data-modal-target');
-          const modal = document.getElementById(modalId);
-          if (modal) {
-            modal.style.display = 'none';
-          }
-        });
-      });
-    });
-  </script>
+
+  <!-- Дополнительная ссылка -->
+  <div class="steam-window" style="right: 5px; position: absolute; bottom: 5px;">
+    <a target="_blank" href="https://t.me/eyes_of_gods_one_bot">
+      <img src="assets/img/icon/glaz.gif" class="glaz">
+    </a>
+  </div>
+  <!-- <div class="steam-window" style="left: 5px; position: absolute; bottom: -10px;">
+    <img src="assets/img/icon/sticker.webp" width="300px" height="100px" style="width: 50;">
+  </div>
+   -->
+ 
 </body>
 </html>

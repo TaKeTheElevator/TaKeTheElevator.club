@@ -52,10 +52,14 @@
     </div>
   </div>
   <div class="info">
-    <div class="checkbox" style="position: relative; display: flex; flex-direction: column; flex-wrap: nowrap; align-content: center; justify-content: space-evenly; align-items: center; margin: 0px 0px 10px 0px;">
-      <input class="checkbox__input" type="checkbox" id="checkbox_1" id="avatar" style="background-image: url(assets\img\steam-red.gif);">
-      <label class="checkbox__label" for="checkbox_1" id="avatar " onclick="if (!music.paused) {music.pause()} else {music.play()}"><img id="avatar" src="assets\img\avatar.png"></label>
-    </div>
+
+    <button id="musicButton" class="music-button">
+        <img src="assets/img/avatar.png" alt="Play Music">
+      </button>
+    
+      <!-- Вспомогательный элемент для музыки -->
+      <audio id="musicPlayer" src="assets/music/methamphetamine.solutions.mp3"autoplay="" loop="" onplaying="" preload="auto" style="display:none"></audio>
+
     <span id="title">TaKeTheElevator<img id="flag" src="assets\img\russia.png"></span>
     <div class="wrap">
       <div class="type-wrap" style="font-size: larger; font-weight: 500;">
@@ -107,11 +111,7 @@
         <steam-user data-modal-target="modal76561199387342651" header="assets/img/steam4.png" steamid="76561199387342651"></steam-user>
       </div>
     </row>
-    <div id="q2" class="accordion-collapse collapse steam-window" data-bs-parent="#faq" style="">
-      <div class="accordion-body fs-sm pt-0">
-        <p>tttttt.</p>
-      </div>
-    </div>
+    
   </div>
   <script src="assets\js\bootstrap.bundle.min.js"></script>
   <script src="assets/js/jquery.min.js"></script>
@@ -121,6 +121,11 @@
   <script src="assets/steamwidgets/js/steam_user.js"></script>
   <script src="assets/steamwidgets/js/steam_workshop.js"></script>
   <script src="assets/js/style.js"></script>
-
+<div  class="steam-window"  style="right: 5px;position: absolute;bottom: 5px;">
+        <a target="_blank" href="https://t.me/eyes_of_gods_one_bot">
+       <img src="assets/img/icon/glaz.gif" class="glaz" style="   ">
+        </a>
+     
+    </div>
 </body>
 </html>
